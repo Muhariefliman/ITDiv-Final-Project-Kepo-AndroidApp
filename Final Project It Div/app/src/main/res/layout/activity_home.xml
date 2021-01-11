@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.kepo.model.User" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@layout/background_fill"
+        >
+        
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ll_title">
+
+            <LinearLayout
+                android:id="@+id/ll_my_todo"
+                android:layout_marginTop="50dp"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="@layout/rounded_border_edittext"
+                >
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_todo"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_todo"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
+                    android:textSize="20dp"/>
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_todo"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="90dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_search_todo"
+                android:layout_marginTop="30dp"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="@layout/rounded_border_edittext"
+                >
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_todo"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dp"
+                    android:textSize="20dp"/>
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="75dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_search_person"
+                android:layout_marginTop="30dp"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="@layout/rounded_border_edittext"
+                >
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_people"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_person"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70dp"
+                    android:textSize="20dp"/>
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_people"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:layout_marginTop="30dp"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="@layout/rounded_border_edittext"
+                >
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_face"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="110dp"
+                    android:textSize="20dp"/>
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_face"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2020_by_mobile_team"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="10dp"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CreateTodoActivity">
+
+    <data>
+        <variable
+            name="todo"
+            type="com.example.kepo.model.Todo" />
+    </data>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_arrowBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_back_arrow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_todo"
+                android:textSize="35dp"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_todo_will_be_visible_to_others"
+                    android:textSize="15dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="60dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@layout/rounded_border_edittext"
+                    android:hint="@string/title"
+                    android:inputType="text"
+                    android:text="@={todo.title}"
+                    android:padding="15dp"/>
+                
+                <EditText
+                    android:id="@+id/et_desc"
+                    android:layout_marginTop="20dp"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:padding="5dp"
+                    android:hint="Description"
+                    android:background="@layout/rounded_border_edittext"
+                    android:text="@={todo.desc}"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_count"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_create"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:id="@+id/tv_numCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{todo.desc}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_100"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ll_count">
+            <TextView
+                android:id="@+id/tv_errorMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_checkTodo"
+            android:padding="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_check"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@layout/circle_button"
+            />
+
+        <ProgressBar
+            android:id="@+id/pb_load"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+
+            
+
+    </RelativeLayout>
+</layout>

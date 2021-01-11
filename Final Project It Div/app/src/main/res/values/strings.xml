@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Kepo</string>
+    <string name="make_stalking_easier">Make Stalking Easier</string>
+    <string name="login">LOGIN</string>
+    <string name="my_todo">My Todo</string>
+    <string name="search_todo">Search Todo</string>
+    <string name="search_person">Search Person</string>
+    <string name="profile">Profile</string>
+    <string name="_2020_by_mobile_team">@ 2020 By Mobile Team</string>
+    <string name="welcome">"Welcome, "</string>
+    <string name="logout">Logout</string>
+    <string name="search_user">Search User...</string>
+    <string name="result_for">Result For </string>
+    <string name="todos">Todos: </string>
+    <string name="no_data">No Data</string>
+    <string name="detail_todo">Detail Todo</string>
+    <string name="last_edited">Last Edited ,</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="here_all_your_todos">here all your todos!</string>
+    <string name="create_todo">Create Todo</string>
+    <string name="your_todo_will_be_visible_to_others">Your todo will be visible to others</string>
+    <string name="_100">/100</string>
+    <string name="update_todo">Update Todo</string>
+</resources>

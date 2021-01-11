@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <corners android:radius="45dp" />
+    <gradient
+        android:angle="45"
+        android:endColor="@color/buttonColor"
+        android:startColor="@color/buttonColor"
+        android:type="linear" />
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+</shape>

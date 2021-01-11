@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".result_user_layout">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.kepo.model.User" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_margin="15dp">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_person"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.name}"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.username}"
+                android:textSize="15dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
